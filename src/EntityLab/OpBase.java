@@ -46,6 +46,10 @@ public class OpBase {
 
 
 
+    public boolean whetherMutatorMethod(Method method){
+        //todo: standard to be a real mutator method
+         return false;
+    }
 
 
     public Class getOpClass() {

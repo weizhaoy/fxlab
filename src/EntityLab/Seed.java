@@ -9,11 +9,13 @@ public class Seed {
     protected File seedFile;
     protected String seedFilePath;
     protected String seedFileName;
+    private int timesUsed;
 
     public Seed(File seedFile){
         setSeedFile(seedFile);
         setSeedFileName(seedFile.getName());
         setSeedFilePath(seedFile.getAbsolutePath());
+        timesUsed = 0;
     }
 
 
@@ -40,5 +42,17 @@ public class Seed {
 
     public void setSeedFileName(String seedFileName) {
         this.seedFileName = seedFileName;
+    }
+
+    public int getTimesUsed() {
+        return timesUsed;
+    }
+
+    public void setTimesUsed(int timesUsed) {
+        this.timesUsed = timesUsed;
+    }
+
+    public void increaseTimesUsed(){
+        timesUsed+=1;
     }
 }
