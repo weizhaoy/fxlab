@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntityLab/FuzzTest.java" afterPath="$PROJECT_DIR$/src/EntityLab/FuzzTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClassLoaderLab/MyClassLoader.java" afterPath="$PROJECT_DIR$/src/ClassLoaderLab/MyClassLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntityLab/OpBase.java" afterPath="$PROJECT_DIR$/src/EntityLab/OpBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntityLab/OpImplementation.java" afterPath="$PROJECT_DIR$/src/EntityLab/OpImplementation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntityLab/OpInterface.java" afterPath="$PROJECT_DIR$/src/EntityLab/OpInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntityLab/Operation.java" afterPath="$PROJECT_DIR$/src/EntityLab/Operation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntityLab/Seed.java" afterPath="$PROJECT_DIR$/src/EntityLab/Seed.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -65,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding>
                 <element signature="e#3053#3408#0" expanded="true" />
                 <element signature="e#3407#3408#0" expanded="true" />
@@ -74,12 +84,98 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FuzzTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyClassLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ClassLoaderLab/MyClassLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FuzzTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EntityLab/FuzzTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3253796">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Operation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EntityLab/Operation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.48806942">
+              <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpImplementation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EntityLab/OpImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+              <folding>
+                <element signature="e#198#199#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Seed.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EntityLab/Seed.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="e#405#406#0" expanded="true" />
+                <element signature="e#436#437#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EntityLab/OpInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+              <folding>
+                <element signature="e#161#162#0" expanded="true" />
+                <element signature="e#188#189#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EntityLab/OpBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,6 +195,9 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -111,18 +210,18 @@
         <option value="$PROJECT_DIR$/src/interfaceLab/Op_Interface_Implementation.java" />
         <option value="$PROJECT_DIR$/src/interfaceLab/InterfaceTest.java" />
         <option value="$PROJECT_DIR$/src/ClassLoaderLab/Utils.java" />
-        <option value="$PROJECT_DIR$/src/ClassLoaderLab/MyClassLoader.java" />
         <option value="$PROJECT_DIR$/src/ClassLoaderLab/SeedCounter.java" />
         <option value="$PROJECT_DIR$/src/ClassLoaderLab/OpCounter.java" />
         <option value="$PROJECT_DIR$/src/ClassLoaderLab/Counter.java" />
-        <option value="$PROJECT_DIR$/src/EntityLab/Seed.java" />
-        <option value="$PROJECT_DIR$/src/EntityLab/Operation.java" />
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/EntityLab/Seed.java" />
         <option value="$PROJECT_DIR$/src/EntityLab/OpImplementation.java" />
         <option value="$PROJECT_DIR$/src/EntityLab/OpInterface.java" />
+        <option value="$PROJECT_DIR$/src/ClassLoaderLab/MyClassLoader.java" />
+        <option value="$PROJECT_DIR$/src/EntityLab/FuzzTest.java" />
         <option value="$PROJECT_DIR$/src/EntityLab/OpBase.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/EntityLab/FuzzTest.java" />
+        <option value="$PROJECT_DIR$/src/EntityLab/Operation.java" />
       </list>
     </option>
   </component>
@@ -146,7 +245,7 @@
     <option name="width" value="1238" />
     <option name="height" value="777" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -181,14 +280,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="FXLab" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -717,12 +808,12 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1477371502795" duration="22162000" />
       <workItem from="1478233681376" duration="1103000" />
-      <workItem from="1478488893327" duration="2472000" />
+      <workItem from="1478488893327" duration="4974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27039000" />
+    <option name="totallyTimeSpent" value="29541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1238" height="777" extended-state="0" />
@@ -819,7 +910,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -837,28 +930,26 @@
           <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
+            <element signature="e#1267#1268#0" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1581#1582#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1741#1742#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#1837#1838#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -868,8 +959,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#161#162#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -879,8 +970,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -934,7 +1025,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -952,28 +1045,26 @@
           <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
+            <element signature="e#1267#1268#0" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1581#1582#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1741#1742#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#1837#1838#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -983,8 +1074,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#161#162#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -994,8 +1085,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1076,13 +1167,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntityLab/Seed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/javafx-src.zip!/javafx/scene/chart/NumberAxis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -1097,73 +1181,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntityLab/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29284164">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntityLab/OpInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26030368">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding>
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#191#192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntityLab/OpBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntityLab/OpImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22776572">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1183,16 +1205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClassLoaderLab/MyClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21908894">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hs_err_pid27885.log">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1204,10 +1216,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClassLoaderLab/MyClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntityLab/OpImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntityLab/OpInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="e#161#162#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntityLab/Seed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
             <element signature="e#3053#3408#0" expanded="true" />
             <element signature="e#3407#3408#0" expanded="true" />
@@ -1217,9 +1281,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EntityLab/FuzzTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3253796">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntityLab/OpBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntityLab/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48806942">
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

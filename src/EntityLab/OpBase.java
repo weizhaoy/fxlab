@@ -1,7 +1,11 @@
 package EntityLab;
 
+import ClassLoaderLab.MyClassLoader;
+
 import java.io.File;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -13,21 +17,32 @@ public class OpBase {
     protected String opFilePath;
     protected String opFileName;
     protected List<Method> methods;
+    //todo opMethods
 
 
 
 
-    protected OpBase(File file){
+    public OpBase(File file){
         opFile = file;
         opFilePath = opFile.getAbsolutePath();
         opFileName = opFile.getName();
-        //todo class
-        //todo methods
+        // class
+        MyClassLoader myClassLoader = new MyClassLoader();
+        try {
+            opClass = myClassLoader.loadClass(opFilePath);
+            // methods
+            methods = new ArrayList<Method>();
+            Collections.addAll(methods, opClass.getDeclaredMethods());
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    public static OpBase fromFile(File file){
-        return new OpBase(file);
-    }
+//    public static OpBase fromFile(File file){
+//        return new OpBase(file);
+//    }
 
 
 

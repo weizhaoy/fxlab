@@ -13,8 +13,8 @@ public class MyClassLoader extends ClassLoader {
 
 
     @Override
-    protected Class<?> findClass(String name) throws ClassNotFoundException {
-        File opFile = new File(name);
+    protected Class<?> findClass(String classFilePath) throws ClassNotFoundException {
+        File opFile = new File(classFilePath);
         if(opFile == null){
             System.out.println("Invalid file.");
             return null;

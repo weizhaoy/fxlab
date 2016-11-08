@@ -1,5 +1,7 @@
 package EntityLab;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,5 +9,14 @@ import java.util.List;
  */
 public class FuzzTest {
     private static List<Seed> seeds;
-    private static List<Operation> operations;
+    private static Operation operation;
+
+    public FuzzTest(List<File> seedFiles, File opInterFile, List<File> opImplFiles){
+        seeds = new ArrayList<Seed>();
+        for (File seedFile : seedFiles) {
+            seeds.add(new Seed(seedFile));
+        }
+
+        operation = new Operation(opInterFile, opImplFiles);
+    }
 }
