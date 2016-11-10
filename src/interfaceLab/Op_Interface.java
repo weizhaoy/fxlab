@@ -1,4 +1,4 @@
-package interfaceLab;
+package InterfaceLab;
 
 import java.io.File;
 
@@ -7,7 +7,9 @@ import java.io.File;
  */
 public interface Op_Interface {
 
-    void Op_mut_1(File seed1, File seed2);
+    File Op_mut_seed_num_1(File seed1);
+    File Op_mut_seed_num_2(File seed1, File seed2);
+    File Op_mut_seed_num_3(File seed1, File seed2, File seed3);
 
     int Op_mut_2(int seed1_as_int, int seed2_as_int);
 
