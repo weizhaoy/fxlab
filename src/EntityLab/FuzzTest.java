@@ -62,4 +62,8 @@ public class FuzzTest {
     public static void setOpTotal(int opTotal) {
         OP_TOTAL = opTotal;
     }
+
+    public void run() {
+        System.out.println("FuzzTest Run!");
+    }
 }

@@ -1,9 +1,9 @@
 package sample;
 
-import ClassLoaderLab.MyClassLoader;
 import EntityLab.FuzzTest;
-import EntityLab.OpBase;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,16 +12,17 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.File;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main extends Application {
@@ -31,6 +32,9 @@ public class Main extends Application {
     private static File opInterFile;
     private static List<File> opImplFiles;
 
+    private static Stage listViewStage = null;
+
+
     private static FuzzTest fuzzTest;
     @Override
     public void start(final Stage primaryStage) throws Exception {
@@ -38,6 +42,9 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
+
+
+
 
 
         final ScrollPane seedScroll = (ScrollPane) root.lookup("#seedScroll");
@@ -63,19 +70,35 @@ public class Main extends Application {
         Button opInterButton = (Button) root.lookup("#opInterButton");
         Button opImplButton = (Button) root.lookup("#opImplButton");
         Button runButton = (Button) root.lookup("#runButton");
+        CheckBox listCheckbox = (CheckBox) root.lookup("#listCheckbox");
+        ToggleButton listToggle = (ToggleButton) root.lookup("#listToggle");
 
         seedScroll.setVisible(false);
 
         final FileChooser fileChooser = new FileChooser();
+        final DirectoryChooser directoryChooser = new DirectoryChooser();
+
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Java Class File", "*.class"),
+                new FileChooser.ExtensionFilter("All Files", "*.*")
+        );
 
 
         seedButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                seedFiles = fileChooser.showOpenMultipleDialog(primaryStage);
+//                seedFiles = fileChooser.showOpenMultipleDialog(primaryStage);
+//                for (File seedFile : seedFiles) {
+//                    System.out.println("Seed: "+seedFile.getAbsolutePath());
+//                }
+                File seedDirectory = directoryChooser.showDialog(primaryStage);
+                System.out.println(seedDirectory.getAbsolutePath());
+                seedFiles = new ArrayList<File>();
+                Collections.addAll(seedFiles,seedDirectory.listFiles());//may not all be files, could be directories
                 for (File seedFile : seedFiles) {
                     System.out.println("Seed: "+seedFile.getAbsolutePath());
                 }
+
 
             }
         });
@@ -107,9 +130,73 @@ public class Main extends Application {
                         || opImplFiles == null || opImplFiles.size() == 0){
                     Alert alert = new Alert(Alert.AlertType.ERROR,"At least one of the required files is not present or valid.");
                     alert.show();
+                }else{
+                    fuzzTest = new FuzzTest(seedFiles,opInterFile,opImplFiles);
+                    fuzzTest.run();
                 }
             }
         });
+
+        listCheckbox.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(newValue == true){
+                    System.out.println("TRUE");
+                    try {
+                        showSeedList(primaryStage);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }else if(newValue == false){
+                    System.out.println("FALSE");
+                    hideSeedList();
+                }
+            }
+        });
+
+        listToggle.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(newValue == true){
+                    System.out.println("TRUE");
+                    try {
+                        showSeedList(primaryStage);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }else if(newValue == false){
+                    System.out.println("FALSE");
+                    hideSeedList();
+                }
+            }
+        });
+    }
+
+    public void showSeedList(final Stage primaryStage) throws IOException {
+        if(listViewStage == null){
+            listViewStage = new Stage();
+            listViewStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent event) {
+                    ToggleButton listToggle = (ToggleButton) primaryStage.getScene().lookup("#listToggle");
+                    listToggle.setSelected(false);
+                }
+            });
+            Parent listRoot = FXMLLoader.load(getClass().getResource("seedList.fxml"));
+            listViewStage.setTitle("Seed List");
+            double x = primaryStage.getX()+primaryStage.getWidth();
+            double y = primaryStage.getY();
+            listViewStage.setX(x);
+            listViewStage.setY(y);
+            listViewStage.setScene(new Scene(listRoot, 300, 275));
+            listViewStage.show();
+        }
+
+    }
+
+    public void hideSeedList(){
+        listViewStage.close();
+        listViewStage = null;
     }
 
 
