@@ -17,7 +17,10 @@ public class OpBase {
     protected String opFilePath;
     protected String opFileName;
     protected List<Method> methods;
-    //todo opMethods
+    protected List<Method> opMethods;//opMethods (Methods that are operators/mutators)
+
+    protected static String OpMethodNamePrefix="Op_mut";
+
 
 
 
@@ -30,9 +33,15 @@ public class OpBase {
         MyClassLoader myClassLoader = new MyClassLoader();
         try {
             opClass = myClassLoader.loadClass(opFilePath);
-            // methods
+            /**methods**/
             methods = new ArrayList<Method>();
             Collections.addAll(methods, opClass.getDeclaredMethods());
+            /**opMethods**/
+            /**either By Method Name**/
+            //opMethods = opMethodsByMethodName();
+
+            /**or By Return Type**/
+            opMethods = opMethodsByReturnType();
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -46,8 +55,9 @@ public class OpBase {
 
 
 
-    public boolean whetherMutatorMethod(Method method){
-        //todo: standard to be a real mutator method
+    public boolean isOpMethod(Method method){//not used yet
+        //todo: standard to be a real OpMethod
+
          return false;
     }
 
@@ -90,5 +100,42 @@ public class OpBase {
 
     public void setOpFileName(String opFileName) {
         this.opFileName = opFileName;
+    }
+
+    public List<Method> getOpMethods() {
+        return opMethods;
+    }
+
+    public void setOpMethods(List<Method> opMethods) {
+        this.opMethods = opMethods;
+    }
+
+    public static String getOpMethodNamePrefix() {
+        return OpMethodNamePrefix;
+    }
+
+    public static void setOpMethodNamePrefix(String opMethodNamePrefix) {
+        OpMethodNamePrefix = opMethodNamePrefix;
+    }
+
+
+    private List<Method> opMethodsByMethodName(){//not suggested currently
+        List<Method> opMethods = new ArrayList<Method>();
+        for (Method method : getMethods()) {
+            if(method.getName().startsWith(OpMethodNamePrefix)){
+                opMethods.add(method);
+            }
+        }
+        return opMethods;
+    }
+
+    private List<Method> opMethodsByReturnType(){
+        List<Method> opMethods = new ArrayList<Method>();
+        for (Method method : getMethods()) {
+            if(method.getReturnType() == File.class){
+                opMethods.add(method);
+            }
+        }
+        return opMethods;
     }
 }

@@ -1,6 +1,7 @@
 package EntityLab;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class FuzzTest {
     private static Operation operation;
     private static int SEED_TOTAL;
     private static int OP_TOTAL;
+    private static double METRIC;/**Metric, double or others?**/
     private static int ITER_NUM;//Times of Iterations
 
     public FuzzTest(List<File> seedFiles, File opInterFile, List<File> opImplFiles){
@@ -66,4 +68,6 @@ public class FuzzTest {
     public void run() {
         System.out.println("FuzzTest Run!");
     }
+
+
 }

@@ -23,14 +23,19 @@ public class Op_Interface_Implementation_2 implements Op_Interface {
         System.out.println("Op_Interface_Implementation_2->Op_mut_seed_num_3(File seed1, File seed2, File seed3)");
         return seed3;
     }
+
+    /*
     @Override
     public int Op_mut_2(int seed1_as_int, int seed2_as_int) {
         int result = seed1_as_int * seed2_as_int;
         return result;
     }
+    */
 
+    /*
     @Override
     public String Op_mut_3(String seed1_as_string, String seed2_as_string) {
         return seed1_as_string+"\n"+seed2_as_string;
     }
+    */
 }

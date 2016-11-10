@@ -26,15 +26,19 @@ public class Op_Interface_Implementation_1 implements Op_Interface {
         return seed3;
     }
 
+    /*
     @Override
     public int Op_mut_2(int seed1_as_int, int seed2_as_int) {
         int result = seed1_as_int + seed2_as_int;
         return result;
     }
+    */
 
+    /*
     @Override
     public String Op_mut_3(String seed1_as_string, String seed2_as_string) {
 
         return seed1_as_string+seed2_as_string;
     }
+    */
 }
