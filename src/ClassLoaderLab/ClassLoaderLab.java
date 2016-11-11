@@ -7,8 +7,10 @@ import java.lang.reflect.Method;
  * Created by weizhaoy on 16/11/10.
  */
 public class ClassLoaderLab {
+
     public static void main(String[] args) throws ClassNotFoundException {
-        MyClassLoader classLoader = new MyClassLoader();File testClassFile = new File("/Users/weizhaoy/Documents/workspace/java/FXLab/out/production/FXLab/interfaceLab/Op_Interface_Implementation_1.class");
+        MyClassLoader classLoader = new MyClassLoader();
+        File testClassFile = new File("/Users/weizhaoy/Documents/workspace/java/FXLab/out/production/FXLab/interfaceLab/Op_Interface_Implementation_1.class");
         Class clazz = classLoader.findClass("/Users/weizhaoy/Documents/workspace/java/FXLab/out/production/FXLab/interfaceLab/Op_Interface_Implementation_1.class");
         Method[] methods = clazz.getMethods();
         for (Method method : methods) {
@@ -21,5 +23,12 @@ public class ClassLoaderLab {
             }
 
         }
+
+//        File oldFile = new File("/Users/weizhaoy/Documents/workspace/java/FXLab/oldFile");
+//        File newfile = Utils.renameFile(oldFile,"newname");
+//        System.out.println(newfile.getAbsolutePath());
+
+
     }
+
 }

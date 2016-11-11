@@ -47,6 +47,7 @@ public class Main extends Application {
 
 
 
+        /**chart**/
         final ScrollPane seedScroll = (ScrollPane) root.lookup("#seedScroll");
         seedScroll.setFitToHeight(true);
         BarChart<String,Number> seedChart = (BarChart) root.lookup("#seedChart");
@@ -66,6 +67,7 @@ public class Main extends Application {
         seedChart.getData().addAll(series);
 
 
+        /**initialize components**/
         Button seedButton = (Button) root.lookup("#seedButton");
         Button opInterButton = (Button) root.lookup("#opInterButton");
         Button opImplButton = (Button) root.lookup("#opImplButton");
@@ -75,6 +77,7 @@ public class Main extends Application {
 
         seedScroll.setVisible(false);
 
+        /**set filechooser**/
         final FileChooser fileChooser = new FileChooser();
         final DirectoryChooser directoryChooser = new DirectoryChooser();
 
@@ -84,6 +87,7 @@ public class Main extends Application {
         );
 
 
+        /**set listeners**/
         seedButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -94,9 +98,13 @@ public class Main extends Application {
                 File seedDirectory = directoryChooser.showDialog(primaryStage);
                 System.out.println(seedDirectory.getAbsolutePath());
                 seedFiles = new ArrayList<File>();
-                Collections.addAll(seedFiles,seedDirectory.listFiles());//may not all be files, could be directories
-                for (File seedFile : seedFiles) {
-                    System.out.println("Seed: "+seedFile.getAbsolutePath());
+                //Collections.addAll(seedFiles,seedDirectory.listFiles());//may not all be files, could be directories
+                for (File seedFile : seedDirectory.listFiles()) {
+                    if(!seedFile.isHidden() && seedFile.isFile()){//in case of hidden files like .DS_STORE
+                        seedFiles.add(seedFile);
+                        System.out.println("Seed: "+seedFile.getAbsolutePath());
+                    }
+
                 }
 
 
@@ -131,6 +139,7 @@ public class Main extends Application {
                     Alert alert = new Alert(Alert.AlertType.ERROR,"At least one of the required files is not present or valid.");
                     alert.show();
                 }else{
+                    /**initialize a new instance of FuzzTest**/
                     fuzzTest = new FuzzTest(seedFiles,opInterFile,opImplFiles);
                     fuzzTest.run();
                 }

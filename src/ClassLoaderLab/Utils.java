@@ -42,4 +42,15 @@ public class Utils {
         }
         return null;
     }
+
+    public static File renameFile(File file, String name){
+        String parent = file.getParent();
+        String extension = "";//assuming parameter "name" has already included extension name
+        String newName = parent+File.separator+name+extension;
+        System.out.println("New Name: "+newName);
+        File newFile = new File(newName);
+        file.renameTo(newFile);
+        return newFile;
+
+    }
 }
