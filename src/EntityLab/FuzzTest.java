@@ -7,6 +7,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by weizhaoy on 16/11/2.
@@ -72,6 +73,46 @@ public class FuzzTest {
         OP_TOTAL = opTotal;
     }
 
+    public int getSEED_TOTAL() {
+        return SEED_TOTAL;
+    }
+
+    public void setSEED_TOTAL(int SEED_TOTAL) {
+        this.SEED_TOTAL = SEED_TOTAL;
+    }
+
+    public int getOP_TOTAL() {
+        return OP_TOTAL;
+    }
+
+    public void setOP_TOTAL(int OP_TOTAL) {
+        this.OP_TOTAL = OP_TOTAL;
+    }
+
+    public double getMETRIC() {
+        return METRIC;
+    }
+
+    public void setMETRIC(double METRIC) {
+        this.METRIC = METRIC;
+    }
+
+    public static String getSTRATEGY() {
+        return STRATEGY;
+    }
+
+    public static void setSTRATEGY(String STRATEGY) {
+        FuzzTest.STRATEGY = STRATEGY;
+    }
+
+    public static int getIterNum() {
+        return ITER_NUM;
+    }
+
+    public static void setIterNum(int iterNum) {
+        ITER_NUM = iterNum;
+    }
+
     public void run() {
         System.out.println("FuzzTest Run!");
         ITER_NUM += 1;
@@ -117,12 +158,15 @@ public class FuzzTest {
 
     private File[] getFilesFromSeeds(Seed[] seeds) {
         List<File> files = new ArrayList<File>();
+        File[] filesArr = new File[seeds.length];
         for (Seed seed : seeds) {
             /**increase seed frequency number by one**/
             seed.increaseTimesUsed();
             files.add(seed.getSeedFile());
         }
-        return (File[]) files.toArray();
+
+        files.toArray(filesArr);
+        return filesArr;
     }
 
     private Method getMethodFromOpImpl(OpImplementation opImplementation) {
@@ -135,23 +179,35 @@ public class FuzzTest {
     }
 
     private Seed[] getRandomSeed(int seedNum) {
-        List<Seed> seeds = new ArrayList<Seed>();
-        if(seedNum <= this.seeds.size()){
+        List<Seed> randomSeeds = new ArrayList<Seed>();
+        Seed[] seedsArr = new Seed[seedNum];
+
+//        if(seedNum <= this.seeds.size()){
             //todo: select seeds
-        }else{
-            seeds.addAll(this.seeds);
-            Collections.addAll(seeds, getRandomSeed(seedNum-this.seeds.size()));
-        }
-        return (Seed[]) seeds.toArray();
+            Random random = new Random();
+            for(int i =0;i <seedNum;i++){
+                //todo: assuming seed is duplicatable
+                Seed s = seeds.get(random.nextInt(seeds.size() - 1));
+                randomSeeds.add(s);//potential bug
+                System.out.println(s.getSeedFilePath());
+            }
+//        }else{
+//            randomSeeds.addAll(this.seeds);
+//            Collections.addAll(randomSeeds, getRandomSeed(seedNum-this.seeds.size()));
+//        }
+        randomSeeds.toArray(seedsArr);
+        return seedsArr;
     }
 
     private OpImplementation getRandomOpImpl() {
         List<OpImplementation> opImpls = this.operation.getOpImplementations();
         //todo: select OpImplementation
-        return null;
+        Random random = new Random();
+
+        return opImpls.get(random.nextInt(opImpls.size()-1));
     }
 
-    
+
 
 
 }
