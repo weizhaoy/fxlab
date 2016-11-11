@@ -50,6 +50,8 @@ public class Utils {
         System.out.println("New Name: "+newName);
         File newFile = new File(newName);
         file.renameTo(newFile);
+        System.out.println("file: "+file.getAbsolutePath());
+        System.out.println("newFile: "+newFile.getAbsolutePath());
         return newFile;
 
     }

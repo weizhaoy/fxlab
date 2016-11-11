@@ -3,6 +3,7 @@ package InterfaceLab;
 import ClassLoaderLab.Utils;
 
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by weizhaoy on 16/10/25.
@@ -17,6 +18,11 @@ public class InterfaceLab {
 //        System.out.println(op_interface_implementation_2.Op_mut_3("hello ","world"));
         File oldFile = new File("/Users/weizhaoy/Documents/workspace/java/FXLab/oldfile");
         File newFile = op_interface_implementation_1.Op_mut_seed_num_1(oldFile);
+        try {
+            newFile.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println(newFile.getAbsolutePath());
     }
 }
