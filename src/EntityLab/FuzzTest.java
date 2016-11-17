@@ -187,7 +187,7 @@ public class FuzzTest {
             Random random = new Random();
             for(int i =0;i <seedNum;i++){
                 //todo: assuming seed is duplicatable
-                Seed s = seeds.get(random.nextInt(seeds.size() - 1));
+                Seed s = seeds.get(random.nextInt(seeds.size()));
                 randomSeeds.add(s);//potential bug
                 System.out.println(s.getSeedFilePath());
             }
@@ -203,8 +203,9 @@ public class FuzzTest {
         List<OpImplementation> opImpls = this.operation.getOpImplementations();
         //todo: select OpImplementation
         Random random = new Random();
-
-        return opImpls.get(random.nextInt(opImpls.size()-1));
+        int idx = random.nextInt(opImpls.size());
+        System.out.println("random op impl: "+idx);
+        return opImpls.get(idx);
     }
 
 

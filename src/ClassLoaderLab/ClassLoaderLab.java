@@ -2,6 +2,7 @@ package ClassLoaderLab;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.util.Random;
 
 /**
  * Created by weizhaoy on 16/11/10.
@@ -23,6 +24,9 @@ public class ClassLoaderLab {
             }
 
         }
+
+        Random random = new Random();
+        System.out.println(random.nextInt(1));
 
 //        File oldFile = new File("/Users/weizhaoy/Documents/workspace/java/FXLab/oldFile");
 //        File newfile = Utils.renameFile(oldFile,"newname");
