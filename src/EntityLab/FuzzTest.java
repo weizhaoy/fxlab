@@ -125,11 +125,11 @@ public class FuzzTest {
 
         } else {
             /**Default: Random**/
-            opImplementation = getRandomOpImpl();
-            opMethod = getMethodFromOpImpl(opImplementation);
-            int seedNum = opMethod.getParameterCount();
-            seeds = getRandomSeed(seedNum);
-            seedFiles = getFilesFromSeeds(seeds);
+            opImplementation = getRandomOpImpl();/**get implementation**/
+            opMethod = getMethodFromOpImpl(opImplementation);/**randomly select a operator method**/
+            int seedNum = opMethod.getParameterCount();/**get number of seeds needed for the method**/
+            seeds = getRandomSeed(seedNum);/**get seeds as method parameter**/
+            seedFiles = getFilesFromSeeds(seeds);/**get seed files**/
 
 
 

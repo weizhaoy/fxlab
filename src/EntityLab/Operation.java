@@ -10,6 +10,7 @@ import java.util.List;
 public class Operation {
     private OpInterface opInterface;
     private List<OpImplementation> opImplementations;
+    //todo private OpImplementation opImplementation;
 
     public OpInterface getOpInterface() {
         return opInterface;
