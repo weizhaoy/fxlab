@@ -21,18 +21,35 @@
               <Button fx:id="runButton" text="Run" />
             <ToggleButton fx:id="listToggle" mnemonicParsing="false" text="ToggleButton" />
             <CheckBox fx:id="listCheckbox" mnemonicParsing="false" text="CheckBox" />
-            <ScrollPane fx:id="seedScroll" prefHeight="200.0" prefWidth="200.0">
-               <content>
-                  <BarChart fx:id="seedChart">
-                    <xAxis>
-                      <CategoryAxis fx:id="seedX" side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis fx:id="seedY" side="LEFT" />
-                    </yAxis>
-                  </BarChart>
-               </content>
-            </ScrollPane>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Untitled Tab 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane fx:id="seedScroll" prefHeight="167.0" prefWidth="435.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <content>
+                                    <BarChart fx:id="seedChart" prefHeight="168.0" prefWidth="434.0">
+                                      <xAxis>
+                                        <CategoryAxis fx:id="seedX" side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis fx:id="seedY" side="LEFT" />
+                                      </yAxis>
+                                    </BarChart>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Untitled Tab 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
           </children>
        </VBox>
    </children>
