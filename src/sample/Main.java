@@ -77,8 +77,8 @@ public class Main extends Application {
         seedScroll.setVisible(false);
 
         /**set filechooser**/
-        final FileChooser fileChooser = new FileChooser();
-        final DirectoryChooser directoryChooser = new DirectoryChooser();
+        final FileChooser fileChooser = new FileChooser();/**for op files**/
+        final DirectoryChooser directoryChooser = new DirectoryChooser();/**for seed files**/
 
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Java Class File", "*.class"),
@@ -110,6 +110,7 @@ public class Main extends Application {
             }
         });
 
+        /**select interface file**/
         opInterButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -118,6 +119,7 @@ public class Main extends Application {
             }
         });
 
+        /**select implementation files**/
         opImplButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -128,6 +130,8 @@ public class Main extends Application {
             }
         });
 
+
+        /**Run fuzztest**/
         runButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -145,6 +149,7 @@ public class Main extends Application {
             }
         });
 
+        /**list hide/show checkbox**/
         listCheckbox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
@@ -162,6 +167,7 @@ public class Main extends Application {
             }
         });
 
+        /**list hide/show toggle**/
         listToggle.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
