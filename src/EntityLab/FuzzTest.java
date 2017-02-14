@@ -17,10 +17,7 @@ public class FuzzTest {
     private  Operation operation;
     private  int SEED_TOTAL;
     private  int OP_TOTAL;
-    private  double METRIC;
-    /**
-     * Metric, double or others?
-     **/
+    private  double METRIC;//todo: Metric, double or others?
     private static String STRATEGY = "Random";
     private static int ITER_NUM;//Times of Iterations
 

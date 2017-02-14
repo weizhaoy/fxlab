@@ -55,4 +55,14 @@ public class Utils {
         return newFile;
 
     }
+
+    public static int unZipFile (File zipFile, String path){
+        File pathFile = new File(path);
+        if(!pathFile.exists() || !pathFile.isDirectory()){
+            pathFile.mkdirs();//mkdirs
+        }
+        //todo
+
+        return 0;
+    }
 }
