@@ -28,13 +28,15 @@ public class CmdTest {
 
 
 
-
-
-
         try {
             Process proc = Runtime.getRuntime().exec(finalcmd);
-            proc.waitFor();
-            InputStream in = proc.getInputStream();
+            int exitValue = proc.waitFor();
+            InputStream in;
+            if (exitValue == 0){
+                in = proc.getInputStream();
+            }else{
+                in = proc.getErrorStream();
+            }
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(in));
             String result = "";
             while ((result = bufferedReader.readLine()) != null) {
