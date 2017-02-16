@@ -10,25 +10,34 @@ import java.io.InputStreamReader;
  */
 public class CmdTest {
 
-    static String binStr="";
-    static String argStr="";
+    static String binStr = "";
+    static String argStr = "";
 
 
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
 //        binStr = "java ";//"/Users/weizhaoy/Documents/STAP/Research/openssl-1.1.0c/apps/openssl "
 //        argStr = " -version ";
-binStr = "pwd";
+        binStr = "javac";
+        argStr = " -a -b ${classfile} -c";
+        String placeholder = "${classfile}";
+        String replacement = "HelloWorld";
+
+        String finalcmd = CmdRunner.genFinalCmd(binStr, argStr, placeholder, replacement);
+
+
+
+
+
 
 
         try {
-            Process proc = Runtime.getRuntime().exec(binStr+argStr);
+            Process proc = Runtime.getRuntime().exec(finalcmd);
             proc.waitFor();
             InputStream in = proc.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(in));
             String result = "";
-            while ((result = bufferedReader.readLine()) != null){
+            while ((result = bufferedReader.readLine()) != null) {
                 System.out.println(result);
             }
 

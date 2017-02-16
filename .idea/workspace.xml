@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CmdLab/CmdRunner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CmdLab/CmdTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FXLab/EntityLab/FuzzTest.class" afterPath="$PROJECT_DIR$/out/production/FXLab/EntityLab/FuzzTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FXLab/sample/Main$2.class" afterPath="$PROJECT_DIR$/out/production/FXLab/sample/Main$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FXLab/sample/Main$3.class" afterPath="$PROJECT_DIR$/out/production/FXLab/sample/Main$3.class" />
@@ -13,6 +11,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FXLab/sample/Main$7.class" afterPath="$PROJECT_DIR$/out/production/FXLab/sample/Main$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FXLab/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/FXLab/sample/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FXLab/ClassLoaderLab/Utils.class" afterPath="$PROJECT_DIR$/out/production/FXLab/ClassLoaderLab/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CmdLab/CmdRunner.java" afterPath="$PROJECT_DIR$/src/CmdLab/CmdRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CmdLab/CmdTest.java" afterPath="$PROJECT_DIR$/src/CmdLab/CmdTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EntityLab/FuzzTest.java" afterPath="$PROJECT_DIR$/src/EntityLab/FuzzTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClassLoaderLab/Utils.java" afterPath="$PROJECT_DIR$/src/ClassLoaderLab/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -166,7 +166,7 @@
         <entry file="file://$PROJECT_DIR$/src/CmdLab/CmdRunner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -175,8 +175,8 @@
       <file leaf-file-name="CmdTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CmdLab/CmdTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.03253796">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.34924078">
+              <caret line="25" column="90" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -920,12 +920,12 @@
       <workItem from="1484199063033" duration="249000" />
       <workItem from="1484203019495" duration="332000" />
       <workItem from="1484203580972" duration="1823000" />
-      <workItem from="1487054506416" duration="1663000" />
+      <workItem from="1487054506416" duration="4839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69400000" />
+    <option name="totallyTimeSpent" value="72576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1238" height="777" extended-state="6" />
@@ -938,7 +938,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997344" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1518,15 +1518,15 @@
     <entry file="file://$PROJECT_DIR$/src/CmdLab/CmdRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CmdLab/CmdTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03253796">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.34924078">
+          <caret line="25" column="90" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
