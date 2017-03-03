@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" prefHeight="444.0" prefWidth="435.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <VBox prefHeight="471.0" prefWidth="462.0">
+            <children>
+                <Button fx:id="seedButton_mc" text="Seeds" />
+                <Button fx:id="opInterButton_mc" text="Op Interface" />
+                <Button fx:id="opImplButton_mc" text="Op Implementation" />
+                <Button fx:id="runButton_mc" text="Run" />
+                <ToggleButton fx:id="listToggle_mc" mnemonicParsing="false" text="ToggleButton" />
+                <CheckBox fx:id="listCheckbox_mc" mnemonicParsing="false" text="CheckBox" />
+                <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Untitled Tab 1">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ScrollPane fx:id="seedScroll" prefHeight="167.0" prefWidth="435.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <BarChart fx:id="seedChart_mc" prefHeight="168.0" prefWidth="434.0">
+                                                    <xAxis>
+                                                        <CategoryAxis fx:id="seedX_mc" side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis fx:id="seedY_mc" side="LEFT" />
+                                                    </yAxis>
+                                                </BarChart>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Untitled Tab 2">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </VBox>
+    </children>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+
+
+</GridPane>

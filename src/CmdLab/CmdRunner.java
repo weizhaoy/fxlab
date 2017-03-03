@@ -1,9 +1,7 @@
 package CmdLab;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.List;
 
 /**
  * Run Shell Cmd
@@ -11,8 +9,10 @@ import java.io.InputStreamReader;
  */
 public class CmdRunner {
 
+    private List<File> seedFiles; //to replace cmd placeholder
+
     private String placeholder; //placeholder pattern in command line, such as "${seed}" todo: maybe more than one?
-    private String replacement; //string to replace the placeholder, such as a concrete seed
+    private String replacement; //string to replace the placeholder, such as a concrete seed path
     private String binStr;  //target binary (path)
     private String argStr;  //command line arguments to the target binary
 
@@ -48,10 +48,23 @@ public class CmdRunner {
     }
 
 
-    public void executeCmd() {
-        finalCmd = genFinalCmd(binStr, argStr, placeholder, replacement);
+    public static void executeCmd(String cmd){
+        executeCmd(cmd,"","","");
+    }
+
+
+    public static void executeCmd(String binStr, String argStr, String placeholder, String replacement) {
+        String finalCmd;
+
+        if(!placeholder.equals("") && !replacement.equals("")){
+            finalCmd = genFinalCmd(binStr, argStr, placeholder, replacement);
+        }else{
+            finalCmd = binStr+argStr;
+        }
+
+        System.out.println("*****Running \""+finalCmd+"\"*****");
         try {
-            proc = Runtime.getRuntime().exec(finalCmd);
+            Process proc = Runtime.getRuntime().exec(finalCmd);
             int exitValue = proc.waitFor();
             InputStream inputStream;
             if (exitValue == 0) {//exit normally
@@ -60,10 +73,13 @@ public class CmdRunner {
                 inputStream = proc.getErrorStream();
             }
 
+//            System.out.println(exitValue);
+
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             String result;
+
             while ((result = bufferedReader.readLine()) != null){
-                System.out.println();
+                System.out.println(result);
             }
 
             bufferedReader.close();
@@ -72,6 +88,9 @@ public class CmdRunner {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+
+        System.out.println("*****Finished \""+finalCmd+"\"*****");
     }
 
     public String getPlaceholder() {
